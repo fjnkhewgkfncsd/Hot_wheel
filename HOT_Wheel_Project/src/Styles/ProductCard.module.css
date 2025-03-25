@@ -1,0 +1,85 @@
+.productCard {
+    border: 1px solid #e1e1e1;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 300px;
+    font-family: sans-serif;
+  }
+  
+  .productTitle {
+    font-size: 1.2rem;
+    margin: 0 0 15px 0;
+    color: #333;
+  }
+  
+  .priceSection {
+    margin-bottom: 15px;
+  }
+  
+  .currentPrice {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #000;
+  }
+  
+  .originalPrice {
+    font-size: 1rem;
+    text-decoration: line-through;
+    color: #999;
+    margin-left: 10px;
+  }
+  
+  .sizeSelection {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 15px;
+  }
+  
+  .sizeButton {
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    background: white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  .sizeButton:hover {
+    border-color: #333;
+  }
+  
+  .divider {
+    border: none;
+    height: 1px;
+    background-color: #eee;
+    margin: 15px 0;
+  }
+  
+  .addToCartButton {
+    width: 100%;
+    padding: 12px;
+    background-color: #000;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .addToCartButton:hover {
+    background-color: #333;
+  }
+  
+  .detailsTitle {
+    font-size: 1rem;
+    margin: 0 0 10px 0;
+  }
+  
+  .description {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0;
+    line-height: 1.4;
+  }
