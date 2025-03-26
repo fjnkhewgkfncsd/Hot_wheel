@@ -9,7 +9,7 @@ const  Header = () =>
 {
     return (
         <header>
-            <p>KhmerKIts</p>
+            <p className="Logo">KhmerKIts</p>
             <nav>
                 <ul>
                     <li><Link>SHOP</Link></li>
@@ -17,10 +17,10 @@ const  Header = () =>
                     <li><Link>ABOUT</Link></li>
                 </ul>
             </nav>
-            <div>
-                <img src={UserIcon} alt="Account" />
-                <img src={CartIcon} alt="Add to Cart" />
-                <img src={Favorite} alt="Favorite" />
+            <div className="right_panel">
+                <img src={UserIcon} alt="Account" className="Icon"/>
+                <img src={CartIcon} alt="Add to Cart" className="Icon"/>
+                <img src={Favorite} alt="Favorite" className="Icon"/>
             </div>
         </header>
     );

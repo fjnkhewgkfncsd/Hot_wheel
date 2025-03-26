@@ -11,18 +11,18 @@ import "../Styles/Footer.css";
 const Footer = () => {
     return (
         <footer>
-            <div>
+            <div className="section">
                 <h4>Compony</h4>
-                <ul>
+                <ul className="center_ul">
                     <li><Link>About Us</Link></li>
                     <li><Link>Our Service</Link></li>
                     <li><Link>Privacy Policy</Link></li>
                     <li><Link>Affiliate Program</Link></li>
                 </ul>
             </div>
-            <div>
+            <div className="section">
                 <h4>Get Help</h4>
-                <ul>
+                <ul className="center_ul">
                     <li>
                         <Link>FAQ</Link>
                     </li>
@@ -41,7 +41,7 @@ const Footer = () => {
                 </ul>
                 
             </div>
-            <div>
+            <div className="section">
                 <h4>Online Shop</h4>
                 <ul>
                     <li>
@@ -55,30 +55,33 @@ const Footer = () => {
                     </li>
                 </ul>
             </div>
-            <div>
-                <ul>
+            <div className="section">
+                <h4>Follow Us</h4>
+                <ul className="section-grid">
                     <li>
                         <Link>
-                            <img src={Tiktok} alt="Tiktok" />
+                            <img src={Tiktok} alt="Tiktok" className="Icon"/>
                         </Link>
                     </li>
                     <li>
                         <Link>
-                            <img src={Twitter} alt="Twitter" />
+                            <img src={Twitter} alt="Twitter" className="Icon"/>
                         </Link>
                     </li>
                     <li>
                         <Link>
-                            <img src={Facebook} alt="Facebook" />
+                            <img src={Facebook} alt="Facebook" className="Icon"/>
                         </Link>
                     </li>
                     <li>
                         <Link>
-                            <img src={Linkedin} alt="Linkedin" />
+                            <img src={Linkedin} alt="Linkedin" className="Icon"/>
                         </Link>
                     </li>
                     <li>
-                        <Link><img src={Instagram} alt="Instagram" /></Link>
+                        <Link>
+                            <img src={Instagram} alt="Instagram" className="Icon"/>
+                        </Link>
                     </li>
                 </ul>
             </div>
