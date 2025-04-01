@@ -12,7 +12,7 @@ const Footer = () => {
     return (
         <footer>
             <div className="section">
-                <h4>Compony</h4>
+                <h4>Company</h4>
                 <ul className="center_ul">
                     <li><Link>About Us</Link></li>
                     <li><Link>Our Service</Link></li>

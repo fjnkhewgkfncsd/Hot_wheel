@@ -1,28 +1,52 @@
-import React from 'react';
-import { Link } from "react-router-dom";
-import UserIcon from "../assets/Icons/user-circle-svgrepo-com.svg";
-import CartIcon from "../assets/Icons/cart-check-svgrepo-com.svg";
-import Favorite from "../assets/Icons/favorite-svgrepo-com.svg";
-import "../Styles/Header.css";
+"use client"
 
-const  Header = () =>
-{
-    return (
-        <header>
-            <p className="Logo">KhmerKIts</p>
-            <nav>
-                <ul>
-                    <li><Link>SHOP</Link></li>
-                    <li><Link>COLLECTIONS</Link></li>
-                    <li><Link>ABOUT</Link></li>
-                </ul>
-            </nav>
-            <div className="right_panel">
-                <img src={UserIcon} alt="Account" className="Icon"/>
-                <img src={CartIcon} alt="Add to Cart" className="Icon"/>
-                <img src={Favorite} alt="Favorite" className="Icon"/>
-            </div>
-        </header>
-    );
+import { useState, useEffect } from "react"
+import "../Styles/Header.css"
+import Account from "../Pages/Account"
+import Modal from "../Pages/Modal"
+import "../Styles/Modal.css"
+import Collections from "../Pages/Collections"
+
+const Header = () => {
+  const [isAccountModalOpen, setIsAccountModalOpen] = useState(false)
+
+  // Debounced scroll handler to close modal
+  useEffect(() => {
+    let scrollTimer
+
+    const handleScroll = () => {
+      clearTimeout(scrollTimer)
+      scrollTimer = setTimeout(() => {
+        if (isAccountModalOpen) {
+          setIsAccountModalOpen(false)
+        }
+      }, 100) // 100ms delay after scrolling stops
+    }
+
+    if (isAccountModalOpen) {
+      window.addEventListener("scroll", handleScroll)
+    }
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll)
+      clearTimeout(scrollTimer)
+    }
+  }, [isAccountModalOpen])
+
+  return (
+    <>
+      {/* Use the Collections component for navigation */}
+      <Collections />
+
+      {/* Account Modal */}
+      {isAccountModalOpen && (
+        <Modal isOpen={isAccountModalOpen} onClose={() => setIsAccountModalOpen(false)}>
+          <Account />
+        </Modal>
+      )}
+    </>
+  )
 }
-export default Header;
+
+export default Header
+
